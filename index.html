@@ -40,6 +40,11 @@
         .text-ozalyn { color: #6F7B9F; }
         .border-ozalyn { border-color: #6F7B9F; }
         
+        /* Filtro para transformar logo branco em #6F7B9F */
+        .logo-tint {
+            filter: brightness(0) saturate(100%) invert(51%) sepia(21%) saturate(693%) hue-rotate(187deg) brightness(93%) contrast(87%);
+        }
+
         /* Animations */
         .reveal { opacity: 0; transform: translateY(15px); transition: all 0.5s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
@@ -65,7 +70,7 @@
     <header class="sticky top-0 bg-white/95 backdrop-blur-md z-50 border-b border-gray-100 shadow-sm">
         <div class="container mx-auto px-4 h-14 flex justify-between items-center">
             <div class="flex items-center">
-                <img src="images/ozalyn-logo.png" alt="Ozalyn Logo" class="h-8 md:h-10 w-auto object-contain" onerror="this.outerHTML='<div class=\'font-black text-[#6F7B9F] text-xl tracking-tighter\'>OZALYN</div>';">
+                <img src="images/ozalyn-logo.png" alt="Ozalyn Logo" class="logo-tint h-8 md:h-10 w-auto object-contain" onerror="this.outerHTML='<div class=\'font-black text-[#6F7B9F] text-xl tracking-tighter\'>OZALYN</div>';">
             </div>
             <a href="https://myblogshop.top/r/bVrUQa95/s" class="bg-ozalyn text-white px-5 py-2 rounded-full text-xs font-bold hover:opacity-90 transition-all uppercase">Commander</a>
         </div>
@@ -101,6 +106,11 @@
                             Découvrez une approche scientifiquement prouvée pour soutenir la digestion, l'équilibre métabolique et le bien-être général — sans stimulants agressifs ni régimes extrêmes. Conçu pour ceux qui veulent des résultats réels.
                         </p>
 
+                        <!-- Mobile Photo (Antes dos Botões) -->
+                        <div class="md:hidden mb-8 flex justify-center">
+                            <img src="images/ozalyn.png" alt="Ozalyn Drink Mobile" class="w-64 drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)]" onerror="this.src='https://via.placeholder.com/300x500/6F7B9F/FFFFFF?text=OZALYN+DRINK';">
+                        </div>
+
                         <!-- Action Options -->
                         <div class="space-y-4">
                             <p class="text-sm font-bold uppercase tracking-widest text-blue-100 mb-2">Choisissez votre pays :</p>
@@ -116,33 +126,9 @@
                     </div>
 
                     <!-- Product Desktop -->
-                    <div class="w-full md:w-2/5 relative reveal active flex justify-center">
+                    <div class="hidden md:flex md:w-2/5 relative reveal active justify-center">
                         <div class="absolute inset-0 bg-white/10 blur-[100px] rounded-full scale-75"></div>
-                        <img src="images/ozalyn.png" alt="Ozalyn Drink" class="relative w-64 md:w-full max-w-sm drop-shadow-[0_30px_60px_rgba(0,0,0,0.4)] transition-transform hover:scale-[1.03] duration-700" onerror="this.src='https://via.placeholder.com/400x600/6F7B9F/FFFFFF?text=OZALYN';">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Trust Badges Summary -->
-        <section class="py-12 bg-gray-50 border-y border-gray-100">
-            <div class="container mx-auto px-4">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                    <div class="reveal">
-                        <div class="text-ozalyn font-black text-2xl mb-1">-64%</div>
-                        <p class="text-[10px] font-bold text-gray-500 uppercase">Offre Limitée</p>
-                    </div>
-                    <div class="reveal">
-                        <div class="text-ozalyn font-black text-2xl mb-1">100%</div>
-                        <p class="text-[10px] font-bold text-gray-500 uppercase">Naturel</p>
-                    </div>
-                    <div class="reveal">
-                        <div class="text-ozalyn font-black text-2xl mb-1">60 Jours</div>
-                        <p class="text-[10px] font-bold text-gray-500 uppercase">Garantie</p>
-                    </div>
-                    <div class="reveal">
-                        <div class="text-ozalyn font-black text-2xl mb-1">EU</div>
-                        <p class="text-[10px] font-bold text-gray-500 uppercase">Qualité Certifiée</p>
+                        <img src="images/ozalyn.png" alt="Ozalyn Drink" class="relative w-full max-w-sm drop-shadow-[0_30px_60px_rgba(0,0,0,0.4)] transition-transform hover:scale-[1.03] duration-700" onerror="this.src='https://via.placeholder.com/400x600/6F7B9F/FFFFFF?text=OZALYN';">
                     </div>
                 </div>
             </div>
@@ -154,7 +140,7 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10 border-b border-slate-800 pb-10">
                 <div class="text-center md:text-left">
-                    <img src="images/ozalyn-logo.png" alt="Ozalyn" class="h-6 mb-4 brightness-0 invert opacity-70 mx-auto md:mx-0" onerror="this.outerHTML='<div class=\'font-black text-white text-xl tracking-tighter mb-4\'>OZALYN</div>';">
+                    <img src="images/ozalyn-logo.png" alt="Ozalyn" class="logo-tint h-6 mb-4 brightness-0 invert opacity-70 mx-auto md:mx-0" onerror="this.outerHTML='<div class=\'font-black text-white text-xl tracking-tighter mb-4\'>OZALYN</div>';">
                     <p class="text-[11px] leading-relaxed max-w-xs mx-auto md:mx-0 uppercase font-bold tracking-tighter">
                         Ozalyn™ — Solutions de bien-être métabolique.
                     </p>
